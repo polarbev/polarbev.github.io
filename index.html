@@ -76,7 +76,7 @@
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2 text-center">
         <span class="link-block">
-          <a href="https://arxiv.org/abs/2308.12963" class="external-link button is-normal is-rounded is-dark">
+          <!-- <a href="https://arxiv.org/abs/2308.12963" class="external-link button is-normal is-rounded is-dark"> -->
             <span class="icon">
               <svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true" focusable="false" data-prefix="fas"
                 data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
@@ -87,10 +87,10 @@
               </svg><!-- <i class="fas fa-file-pdf"></i> Font Awesome fontawesome.com -->
             </span>
             <span>Paper</span>
-          </a>
+          <!-- </a> -->
         </span>
         <span class="link-block">
-          <a href="https://github.com/xiyuez2/MapPrior" class="external-link button is-normal is-rounded is-dark">
+          <!-- <a href="https://github.com/xiyuez2/MapPrior" class="external-link button is-normal is-rounded is-dark"> -->
             <span class="icon">
               <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab"
                 data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg="">
@@ -100,7 +100,7 @@
               </svg><!-- <i class="fab fa-github"></i> Font Awesome fontawesome.com -->
             </span>
             <span>Code</span>
-          </a>
+          <!-- </a> -->
         </span>
       </div>
     </div>
@@ -160,7 +160,7 @@
     </div> -->
 
     <center>
-      <img src="./MapPrior_files/images/teaser.png" class="img-responsive" alt="overview" width="80%">
+      <img src="./MapPrior_files/images/compare.png" class="img-responsive" alt="overview" width="80%">
     </center>
 
     <div class="row">
@@ -170,18 +170,7 @@
         </h3>
         <div class="text-justify">
 
-          Despite tremendous advancements in bird's-eye view (BEV) perception, 
-          existing models fall short in generating realistic and coherent semantic map layouts, 
-          and they fail to account for uncertainties arising from partial sensor information 
-          (such as occlusion or limited coverage). In this work, we introduce <b>MapPrior</b>, 
-          a novel BEV perception framework that combines a traditional 
-          discriminative BEV perception model with a learned generative model for semantic map layouts. 
-          MapPrior delivers predictions with better <b>accuracy</b>, <b>realism</b> and <b>uncertainty awareness</b>. 
-          
-          <br/>
-          We evaluate our model on the large-scale nuScenes benchmark. 
-          At the time of submission, MapPrior outperforms the strongest competing method, with significantly improved MMD and ECE scores in camera- and LiDAR-based BEV perception.
-          Furthermore, our method can be used to perpetually generate layouts with unconditional sampling. 
+          Semantic segmentation in bird’s eye view (BEV) plays a crucial role in autonomous driving. Previous methods usually follow an end-to-end pipeline, directly predicting the BEV segmentation map from monocular RGB inputs. However, the challenge arises when the RGB inputs and BEV targets represent distinct perspectives, making the direct point-to-point translation hard to optimize. In this paper, we decompose the original BEV segmentation task into two stages, namely BEV map reconstruction and cross-view feature alignment. In the first stage, we train a BEV autoencoder to perfectly reconstruct the BEV segmentation label maps given corrupted noisy latent representation, which urges the decoder to learn fundamental knowledge of typical BEV scene patterns. The second stage involves mapping RGB input images into the pretrained BEV latent space of Stage I, directly optimizing the correlations between the two views at the feature level. Our approach simplifies the complexity of combining perception and generation into a single step, equipping the model to handle intricate and challenging scenes effectively. Besides, we propose to transform the BEV segmentation map from the Cartesian coordinate system to the polar coordinate system. This conversion allows us to correspond each RGB image column directly to BEV segmentation targets, one by one. Extensive experiments on the nuScenes and Argoverse datasets show our model clearly outperforms state-of-the-art models.
         </div>
         
       </div>
