@@ -178,81 +178,11 @@
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
         <h3>
-          Bird's Eye View Map Estimation
-        </h3>
-        <p>
-          <font size="3" color="gray">
-            * You can select different <b>input modalities</b> on different <b>scenes</b> and compare
-            our method with baselines (BEVFuison).
-            <br />
-            <!-- * <b>3D stylization</b> denotes finetuning pre-trained NGP model using <a
-              href="https://github.com/NVIDIA/FastPhotoStyle">FastPhotoStyle</a>. -->
-          </font>
-        </p>
-
-        <center>
-          <div class="video-compare-container" id="ours" style="width: 50%">
-            <video class="video" id="simulation_video" loop="" playsinline="" autoplay="" muted=""
-              poster="MapPrior_files/loading.gif" src="MapPrior_files/ours/LiDAR_scene0.mp4"
-              onplay="resizeAndPlay(this)">
-
-            </video>
-            <canvas class="videoMerge" id="simulation_videoMerge"></canvas>
-          </div>
-          <video class="video" id="baseline" loop="" playsinline="" autoplay="" muted=""
-            poster="MapPrior_files/loading.gif" src="MapPrior_files/ours/LiDAR_scene0.mp4" style="width: 0%">
-          </video>
-
-          <h4>
-            Modality
-          </h4>
-          <ul class="nav nav-pills nav-justified" id="sim-view-ul" style="width: 60%">
-            <li role="presentation" class="active"><a href="javascript: void(0);" onclick="ChangeSim(0);">LiDAR</a>
-            </li>
-            <li role="presentation"><a href="javascript: void(0);" onclick="ChangeSim(1);">Camera</a></li>
-            <li role="presentation"><a href="javascript: void(0);" onclick="ChangeSim(2);">Both</a></li>
-          </ul>
-          <h4>
-            Scene
-          </h4>
-          <ul class="nav nav-pills nav-justified" id="scene-view-ul" style="width: 60%">
-            <li role="presentation" class="active"><a href="javascript: void(0);"
-                onclick="ChangeScene(0);">Scene0</a>
-            </li>
-            <li role="presentation"><a href="javascript: void(0);" onclick="ChangeScene(1);">Scene1</a>
-            </li>
-            <li role="presentation"><a href="javascript: void(0);" onclick="ChangeScene(2);">Scene2</a>
-            </li>
-            <li role="presentation"><a href="javascript: void(0);" onclick="ChangeScene(3);">Scene3</a>
-            <!-- </li>
-            <li role="presentation"><a href="javascript: void(0);" onclick="ChangeScene(4);">Scene4</a>
-            </li> -->
-            <!-- <br />
-            <li role="presentation"><a href="javascript: void(0);" onclick="ChangeScene(5);">Scene5</a>
-            </li>
-            <li role="presentation"><a href="javascript: void(0);" onclick="ChangeScene(6);">Scene6</a></li>
-            <li role="presentation"><a href="javascript: void(0);" onclick="ChangeScene(7);">Scene7</a></li>
-            <li role="presentation"><a href="javascript: void(0);" onclick="ChangeScene(8);">Scene8</a></li> -->
-          </ul>
-
-          <ul class="nav nav-pills nav-justified" id="method-view-ul" style="width: 60%">
-            <!-- <li role="presentation" class="active"><a href="javascript: void(0);" onclick="ChangeMethod(0);">Ours</a> -->
-            <!-- </li> -->
-
-            
-          </ul>
-        </center>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-10 col-md-offset-1">
-        <h3>
-          Diversity Sampling
+          Bird's Eye View Semantic Segmentation
         </h3>
 
         <div class="text-justify">
-          Our method can sample multiple results per input with diversity, providing better uncertainty awareness:
+          Our method shows better segmentation results in different weather conditions
         </div>
 
         <table width="100%">
@@ -279,29 +209,8 @@
             </tr>
           </tbody>
         </table>
-        <center>
-          <img src="./MapPrior_files/images/diverse.png" class="img-responsive" alt="overview" width="100%"
-            >
-        </center>
       </div>
     </div>
-
-    <!-- <div class="row">
-      <div class="col-md-10 col-md-offset-1">
-        <h3>
-          perpetual Generation
-        </h3>
-
-        <div class="text-justify">
-          Our method can be exploited in a progressive manner to generate perpetual traffic layouts.
-        </div>
-
-        <center>
-          <img src="./MapPrior_files/video/uncond_video.gif" class="img-responsive" alt="perpetual" width="50%"
-            >
-        </center>
-      </div>
-    </div> -->
     
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
