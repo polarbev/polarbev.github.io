@@ -216,14 +216,11 @@
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
         <h3>
-          Map Estimation using Generative Models
+          BEV segmentation using two stages
         </h3>
 
         <div class="text-justify">
-          MapPrior first makes use of an off-the-shelf perception model to generate an initial noisy estimate from the sensory
-input, which uses monocular depth estimation to project camera features to BEV. It then encodes the noisy
-estimate into a discrete latent code using a generative encoder and generates various samples through a transformer-based
-controlled synthesis. Finally, MapPrior decodes these samples into outputs with a decoder
+        First, we convert the BEV segmentation image from the Cartesian coordinate system to the polar coordinate system. This conversion enhances the correspondence between the segmentation image and the perspective image. Next, we compress the BEV segmentation image, allowing us to learn extensive features while minimizing memory usage. In the second stage, we employ the column-wise transformer to align the image features with the segmentation image features more effectively. Finally, we input these aligned features into the decoder to generate the ultimate segmentation result.
         </div>
         <center>
           <img src="./MapPrior_files/images/method.png" class="img-responsive" width="120%"
