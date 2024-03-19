@@ -94,7 +94,7 @@ function ChangeSim(idx){
     //     }
     // }
 
-    document.getElementById("simulation_video").src = "MapPrior_files/ours/"+ currentSim + '_' + currentScene + '.mp4';
+    document.getElementById("simulation_video").src = "PolarBEV_files/ours/"+ currentSim + '_' + currentScene + '.mp4';
     // ChangeMethod(0);
 }
 
@@ -143,7 +143,7 @@ function ChangeScene(idx){
 
     let video = document.getElementById("simulation_video")
     let container = video.parentNode
-    video.src = "MapPrior_files/ours/"+ currentSim + '_' + currentScene + '.mp4';
+    video.src = "PolarBEV_files/ours/"+ currentSim + '_' + currentScene + '.mp4';
 
     container.style = "width: 50%; opacity: 0;"
     setTimeout(()=>{
@@ -166,7 +166,7 @@ function ChangeMethod(idx){
     }
     li_list[idx].className = "active";
     currentMethod = currentMethodList[idx]
-    document.getElementById("baseline").src = "MapPrior_files/" + currentMethod +'/'+ currentSim +'_'+ currentScene + '.mp4';
+    document.getElementById("baseline").src = "PolarBEV_files/" + currentMethod +'/'+ currentSim +'_'+ currentScene + '.mp4';
     if(idx == 0){
         document.getElementById("ours").style="width:100%";
         document.getElementById("baseline").style="width:0%";
